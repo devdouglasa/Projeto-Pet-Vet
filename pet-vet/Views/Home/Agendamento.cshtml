@@ -1,0 +1,38 @@
+﻿@model Agendamento;
+
+@{
+    ViewData["Title"] = "Agendamento";
+}
+
+<h1 class="agendamento-titulo">Agendamento de Cadastro</h1>
+
+<form class="formulario" method="post">
+    <div class="campo">
+        <label asp-for="nome"><strong>Nome:</strong></label>
+        <input asp-for="nome" type="text" placeholder="Insira seu nome..." required />
+    </div>
+    <div class="campo">
+        <label asp-for="contato"><strong>Contato:</strong></label>
+        <input asp-for="contato" type="text" placeholder="(86) 99585-6897" required />
+    </div>
+    <div class="campo">
+        <label asp-for="data"><strong>Data:</strong></label>
+        <input asp-for="data" type="date" placeholder="Insira seu nome..." required />
+    </div>
+    <div class="campo">
+        <label asp-for="animal"><strong>Animal:</strong></label>
+        <select asp-for="animal" required>
+            <option selected disabled>Selecione</option>
+            <option>Cachorro</option>
+            <option>Gato</option>
+            <option>Dinossauro</option>
+        </select>
+    </div>
+    <div class="campo">
+        <label asp-for="necessidade"><strong>Necessidade:</strong></label>
+        <textarea asp-for="necessidade" row="6" style="width: 26em;" placeholder="Insira o tipo de atendimento" required></textarea>
+    </div>
+    <input class="botao" type="submit" value="Cadastrar" />
+</form>
+    
+
